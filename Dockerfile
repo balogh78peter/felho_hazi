@@ -5,5 +5,4 @@ MAINTAINER	Balogh Péter
 RUN			yum install -y httpd
 EXPOSE		80
 ADD			https://github.com/balogh78peter/felho_hazi/blob/main/index.html /var/www/html
-ENTRYPOINT ["/usr/sbin/httpd"]
-CMD        ["-D", "FOREGROUND"]
+CMD        ["httpd", "-D", "FOREGROUND"]
