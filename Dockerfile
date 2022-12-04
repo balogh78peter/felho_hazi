@@ -4,5 +4,5 @@ LABEL		description="Felhő technológiák házi feladat"
 MAINTAINER	Balogh Péter
 RUN			yum install -y httpd
 EXPOSE		80
-ADD			https://github.com/balogh78peter/felho_hazi/blob/main/index.html /var/www/html
+COPY		./src/ /var/www/html
 CMD        ["httpd", "-D", "FOREGROUND"]
